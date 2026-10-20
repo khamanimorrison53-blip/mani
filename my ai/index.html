@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Khamani AI</title>
+
+    <!-- CSS IS ALREADY CONNECTED -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>🤖 Khamani AI</h1>
+
+        <p>Your Personal AI Assistant</p>
+
+    </header>
+
+
+    <main>
+
+        <!-- CHAT -->
+        <section class="card">
+
+            <h2>💬 Chat with Khamani AI</h2>
+
+            <div id="chatBox">
+
+                <div class="ai-message">
+                    Hello! 👋 I'm Khamani AI.
+                    What would you like to know?
+                </div>
+
+            </div>
+
+
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Type your message..."
+                    onkeydown="handleEnter(event)"
+                >
+
+                <button onclick="sendMessage()">
+                    Send
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- IMAGE GENERATOR -->
+        <section class="card">
+
+            <h2>🎨 AI Image Generator</h2>
+
+            <p>
+                Describe the image you want Khamani AI to create.
+            </p>
+
+
+            <textarea
+                id="imagePrompt"
+                placeholder="Example: A futuristic city in Belize at sunset..."
+            ></textarea>
+
+
+            <button onclick="generateImage()">
+                Create Image
+            </button>
+
+
+            <div id="imageResult"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT IS ALREADY CONNECTED -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
